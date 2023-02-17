@@ -150,6 +150,31 @@ window.addEventListener("DOMContentLoaded", function () {
   maxsulotlar.innerHTML = displeySection3;
 });
 
+
+// input orqali izlash
+
+const input = document.getElementById('qiymat');
+
+const search = document.getElementById('search');
+
+search.addEventListener('click', function () {
+  let displeySection3 = section3List.map(function (item) {
+    if (input.value === item.category) {
+      return `<article class="menu">
+                <img src="${item.img}" alt="images">
+                <p>${item.name}</p>
+                <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                <h4>$${item.price}</h4>
+                <button class="btnAdd">+</button>
+              </article>`;
+    }
+    
+})
+displeySection3 = displeySection3.join('')
+
+maxsulotlar.innerHTML = displeySection3
+})
+
 const btn1 = document.querySelector(".btn1");
 const btn2 = document.querySelector(".btn2");
 const btn3 = document.querySelector(".btn3");
@@ -293,3 +318,5 @@ btn8.addEventListener("click", function () {
   displeySection3 = displeySection3.join("");
   maxsulotlar.innerHTML = displeySection3;
 });
+
+
