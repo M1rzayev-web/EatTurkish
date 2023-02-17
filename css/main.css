@@ -6,6 +6,16 @@
   padding: 0;
 }
 
+.korzinka {
+  width: 600px;
+  height: 600px;
+  position: fixed;
+  background-color: black;
+  margin-left: 35%;
+  margin-top: 10%;
+  display: none;
+}
+
 .continer {
   max-width: 1920px;
   border: 1px solid red;

@@ -1,3 +1,32 @@
+// Reklama vaqti
+
+// const btn = document.getElementById('btn')
+
+// btn.addEventListener('click', function () {
+//     console.log("5 soniya kuting");
+//     setTimeout(bosilsa, 5000)
+// })
+
+// function bosilsa(){
+//     console.log("btn bosildi 5 sonniya kutganingiz uchun raxmat");
+// }
+
+// Musqaymoq
+// let order = (fName, product) => {
+//     console.log('zakaz olindi');
+//     console.log(fName);
+//     product()
+// }
+// let name = 'Olma'
+// function product() {
+//     setTimeout(function () {
+//         console.log('p started');
+//         setTimeout
+//     })
+// }
+
+// ---------------------------------------------------------------------------------
+
 const section2List = [
   {
     id: 1,
@@ -126,7 +155,7 @@ const section3List = [
     category: "freecombo",
   },
   {
-    id: 12  ,
+    id: 12,
     img: "./images/freeK-2.png",
     name: "Barbecue Shish kebab Shashlik Skewer",
     price: 12.0,
@@ -150,14 +179,13 @@ window.addEventListener("DOMContentLoaded", function () {
   maxsulotlar.innerHTML = displeySection3;
 });
 
-
 // input orqali izlash
 
-const input = document.getElementById('qiymat');
+const input = document.getElementById("qiymat");
 
-const search = document.getElementById('search');
+const search = document.getElementById("search");
 
-search.addEventListener('click', function () {
+search.addEventListener("click", function () {
   let displeySection3 = section3List.map(function (item) {
     if (input.value === item.category) {
       return `<article class="menu">
@@ -168,12 +196,11 @@ search.addEventListener('click', function () {
                 <button class="btnAdd">+</button>
               </article>`;
     }
-    
-})
-displeySection3 = displeySection3.join('')
+  });
+  displeySection3 = displeySection3.join("");
 
-maxsulotlar.innerHTML = displeySection3
-})
+  maxsulotlar.innerHTML = displeySection3;
+});
 
 const btn1 = document.querySelector(".btn1");
 const btn2 = document.querySelector(".btn2");
@@ -184,8 +211,7 @@ const btn6 = document.querySelector(".btn6");
 const btn7 = document.querySelector(".btn7");
 const btn8 = document.querySelector(".btn8");
 
-
-btn1.addEventListener('click', function () {
+btn1.addEventListener("click", function () {
   let displeySection3 = section3List.map(function (item) {
     return `<article class="menu">
                 <img src="${item.img}" alt="images">
@@ -197,24 +223,23 @@ btn1.addEventListener('click', function () {
   });
   displeySection3 = displeySection3.join("");
   maxsulotlar.innerHTML = displeySection3;
-})
+});
 
-
-btn2.addEventListener('click', function () {
+btn2.addEventListener("click", function () {
   let displeySection3 = section3List.map(function (item) {
     if (item.category === "lavash") {
-    return `<article class="menu">
+      return `<article class="menu">
                 <img src="${item.img}" alt="images">
                 <p>${item.name}</p>
                 <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
                 <h4>$${item.price}</h4>
                 <button class="btnAdd">+</button>
               </article>`;
-  }
-  })
-  
-   displeySection3 = displeySection3.join("");
-maxsulotlar.innerHTML = displeySection3;
+    }
+  });
+
+  displeySection3 = displeySection3.join("");
+  maxsulotlar.innerHTML = displeySection3;
 });
 
 btn3.addEventListener("click", function () {
@@ -318,5 +343,3 @@ btn8.addEventListener("click", function () {
   displeySection3 = displeySection3.join("");
   maxsulotlar.innerHTML = displeySection3;
 });
-
-
