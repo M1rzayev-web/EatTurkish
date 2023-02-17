@@ -9,4 +9,21 @@
     max-width: 1920px;
     border: 1px solid red;
     @import "./block/block";
+
+    @media (max-width:1440px){
+    .header{
+        padding: 0 3%;
+    }
+    main{
+        .section1{
+            padding: 0 3%;
+        }
+        .section2{
+            padding: 0 3%;
+        }
+        .section3{
+            padding: 0 3%;
+        }
+    }
+}
 }
