@@ -208,10 +208,14 @@
 .continer main .section3__header .span-search input {
   width: 40%;
   font-size: 22px;
+  margin-left: 0;
+  border-radius: 10px;
 }
 .continer main .section3__header .span-search .btnSearch {
   width: 100px;
   border-radius: 20px;
+  margin-left: -50%;
+  border: 1px solid #bb2339;
 }
 .continer main .section3__header span {
   width: 100%;
