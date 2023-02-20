@@ -1,31 +1,3 @@
-// Reklama vaqti
-
-// const btn = document.getElementById('btn')
-
-// btn.addEventListener('click', function () {
-//     console.log("5 soniya kuting");
-//     setTimeout(bosilsa, 5000)
-// })
-
-// function bosilsa(){
-//     console.log("btn bosildi 5 sonniya kutganingiz uchun raxmat");
-// }
-
-// Musqaymoq
-// let order = (fName, product) => {
-//     console.log('zakaz olindi');
-//     console.log(fName);
-//     product()
-// }
-// let name = 'Olma'
-// function product() {
-//     setTimeout(function () {
-//         console.log('p started');
-//         setTimeout
-//     })
-// }
-
-// ---------------------------------------------------------------------------------
 
 const section2List = [
   {
@@ -75,7 +47,6 @@ window.addEventListener("DOMContentLoaded", function () {
   maxsulot.innerHTML = displeySection2;
 });
 
-// maxsulot2 js malumot qismi
 const section3List = [
   {
     id: 1,
@@ -343,3 +314,32 @@ btn8.addEventListener("click", function () {
   displeySection3 = displeySection3.join("");
   maxsulotlar.innerHTML = displeySection3;
 });
+
+// korzinka ochish joyi
+
+const btnKorzinka = document.getElementById("btnKorzinka");
+const korzinka = document.querySelector(".korzinka");
+const korzinkaItem = [];
+
+function addclass() {
+  korzinka.classList.toggle("modalkorzinka");
+}
+const ad = document.getElementById("ad");
+const closeAdBtn = document.getElementById("close-ad");
+
+// reklama divini paydo qilish
+setTimeout(function () {
+  ad.style.display = "block";
+}, 5000);
+
+// reklama divini yashirish funksiyasi
+function hideAd() {
+  ad.style.display = "none";
+}
+
+// reklamani yopuvchi tugma
+closeAdBtn.addEventListener("click", hideAd);
+setInterval(function () {
+  ad.style.display = "none";
+}, 20000);
+

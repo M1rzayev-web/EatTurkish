@@ -6,16 +6,6 @@
   padding: 0;
 }
 
-.korzinka {
-  width: 600px;
-  height: 600px;
-  position: fixed;
-  background-color: black;
-  margin-left: 35%;
-  margin-top: 10%;
-  display: none;
-}
-
 .continer {
   max-width: 1920px;
   border: 1px solid red;
@@ -27,7 +17,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 14%;
-  background-color: #BB2339;
+  background-color: #bb2339;
 }
 .continer .header__logo {
   width: 60%;
@@ -67,6 +57,69 @@
 }
 .continer .header__list ul li button:hover {
   cursor: pointer;
+}
+.continer .header__list ul .reklama_uchun {
+  display: none;
+  border-radius: 15px;
+  width: 300px;
+  height: 400px;
+  position: fixed;
+  right: 4%;
+  top: 10%;
+  background-color: rgb(76, 31, 31);
+}
+.continer .header__list ul .reklama_uchun button {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  color: rgb(255, 255, 255);
+  border: none;
+  margin-right: 0;
+}
+.continer .header__list ul .reklama_uchun img {
+  width: 100%;
+  height: 58%;
+}
+.continer .header__list ul .reklama_uchun p {
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+}
+.continer .header__list ul .reklama_uchun h4 {
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  font-size: 25px;
+  color: red;
+}
+.continer .header__list ul .btnKorzinka {
+  background: transparent;
+  border: none;
+}
+.continer .header__list ul .btnKorzinka i {
+  font-size: 24px;
+  color: white;
+}
+.continer .header__list ul .btnKorzinka:hover {
+  cursor: pointer;
+}
+.continer .header__list ul .korzinka {
+  width: 50%;
+  height: 70%;
+  margin-left: -30%;
+  position: fixed;
+  background-color: #682f37;
+  top: 10%;
+  display: none;
+}
+.continer .header__list ul .modalkorzinka {
+  display: block;
 }
 .continer main {
   width: 100%;
