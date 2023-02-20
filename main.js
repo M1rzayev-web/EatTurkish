@@ -320,10 +320,19 @@ btn8.addEventListener("click", function () {
 const btnKorzinka = document.getElementById("btnKorzinka");
 const korzinka = document.querySelector(".korzinka");
 const korzinkaItem = [];
-
+const closeKor=document.getElementById('closeKor')
 function addclass() {
   korzinka.classList.toggle("modalkorzinka");
 }
+function noneKor() {
+  korzinka.style.display="none"
+}
+
+
+
+
+
+// reklama uchun
 const ad = document.getElementById("ad");
 const closeAdBtn = document.getElementById("close-ad");
 

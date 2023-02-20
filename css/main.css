@@ -111,6 +111,7 @@
 }
 .continer .header__list ul .korzinka {
   width: 50%;
+  border-radius: 15px;
   height: 70%;
   margin-left: -30%;
   position: fixed;
@@ -118,8 +119,28 @@
   top: 10%;
   display: none;
 }
+.continer .header__list ul .korzinka .button_uchun {
+  width: 100%;
+  height: 5%;
+}
+.continer .header__list ul .korzinka .button_uchun button {
+  width: 35px;
+  height: 35px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 96.6%;
+  font-size: 24px;
+  background-color: #ff0526;
+  color: white;
+  border: none;
+}
 .continer .header__list ul .modalkorzinka {
   display: block;
+}
+.continer .header__list ul .noneKor {
+  display: none;
 }
 .continer main {
   width: 100%;

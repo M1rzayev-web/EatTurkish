@@ -1,0 +1,31 @@
+.continer{
+    max-width: 1440px;
+   
+}
+span{
+width: 100%;
+display: flex;
+
+}
+h1{
+    width: 50%;
+    height: 400px;
+    display: flex;
+    font-size: 55px;
+    align-items: center;
+    justify-content: center;
+    color: rgb(165, 141, 7);
+}
+img{
+    width: 400px;
+    height: 400px;
+}
+p{
+    width: 100%;
+    font-size: 30px;
+}
+a{
+    text-decoration: none;
+    color: rgb(9, 20, 175);
+    font-size: 30px;
+}
