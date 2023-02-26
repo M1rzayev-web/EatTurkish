@@ -1,4 +1,3 @@
-
 const section2List = [
   {
     id: 1,
@@ -143,12 +142,64 @@ window.addEventListener("DOMContentLoaded", function () {
                 <p>${item.name}</p>
                 <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
                 <h4>$${item.price}</h4>
-                <button class="btnAdd">+</button>
+                <button onclick="korzinkaPush()" class="btnAdd">+</button>
               </article>`;
   });
   displeySection3 = displeySection3.join("");
   maxsulotlar.innerHTML = displeySection3;
 });
+
+// korzinka push
+
+// const maxsulotlar = document.querySelector(".maxsulotlar");
+const korzinka__item = document.querySelector(".korzinka__item");
+const korzinkaArry = [];
+
+// Maxsulotlar sahifaga chiqariladi
+function chiqarMaxsulotlar(maxsulotlarList) {
+  let displeySection3 = maxsulotlarList.map(function (item) {
+    return `<article class="menu">
+      <img src="${item.img}" alt="images">
+      <p>${item.name}</p>
+      <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+      <h4>$${item.price}</h4>
+      <button onclick="korzinkaQosh(${item.id})" class="btnAdd">+</button>
+    </article>`;
+  });
+  displeySection3 = displeySection3.join("");
+  maxsulotlar.innerHTML = displeySection3;
+}
+
+// Maxsulotlar sahifaga chiqariladi
+window.addEventListener("DOMContentLoaded", function () {
+  chiqarMaxsulotlar(section3List);
+});
+
+// Maxsulotni korzinkaga qo'shish
+function korzinkaQosh(id) {
+  const maxsulot = section3List.find((item) => item.id === id);
+  korzinkaArry.push(maxsulot);
+  chiqarKorzinka();
+}
+
+// Korzinkani sahifaga chiqarish
+function chiqarKorzinka() {
+  let korzinkaItems = "";
+  korzinkaArry.forEach(function (item) {
+    korzinkaItems += `<article class="menu">
+      <img src="${item.img}" alt="images">
+      <p>${item.name}</p>
+      <span><i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      </span>
+      <h4>$${item.price}</h4>
+    </article>`;
+  });
+  korzinka__item.innerHTML = korzinkaItems;
+}
 
 // input orqali izlash
 
@@ -320,17 +371,13 @@ btn8.addEventListener("click", function () {
 const btnKorzinka = document.getElementById("btnKorzinka");
 const korzinka = document.querySelector(".korzinka");
 const korzinkaItem = [];
-const closeKor=document.getElementById('closeKor')
+const closeKor = document.getElementById("closeKor");
 function addclass() {
   korzinka.classList.toggle("modalkorzinka");
 }
 function noneKor() {
-  korzinka.style.display="none"
+  korzinka.style.display = "none";
 }
-
-
-
-
 
 // reklama uchun
 const ad = document.getElementById("ad");
@@ -351,4 +398,3 @@ closeAdBtn.addEventListener("click", hideAd);
 setInterval(function () {
   ad.style.display = "none";
 }, 20000);
-

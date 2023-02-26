@@ -9,6 +9,9 @@
 .continer {
   max-width: 1920px;
   border: 1px solid red;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
 }
 .continer .header {
   width: 100%;
@@ -115,22 +118,64 @@
   height: 70%;
   margin-left: -30%;
   position: fixed;
+  overflow-x: hidden;
   background-color: #682f37;
   top: 10%;
   display: none;
+}
+.continer .header__list ul .korzinka .korzinka__item {
+  width: 100%;
+  height: 95%;
+  display: flex;
+  justify-content: space-around;
+  overflow: auto;
+  flex-wrap: wrap;
+}
+.continer .header__list ul .korzinka .korzinka__item .menu {
+  margin: 15px 0;
+  width: 24%;
+  height: 390px;
+  text-align: center;
+  background-color: white;
+  border-radius: 14px;
+}
+.continer .header__list ul .korzinka .korzinka__item .menu img {
+  width: 100%;
+  height: 183px;
+  margin-top: 25px;
+}
+.continer .header__list ul .korzinka .korzinka__item .menu p {
+  font-size: 18px;
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+  font-family: "Open Sans";
+}
+.continer .header__list ul .korzinka .korzinka__item .menu span {
+  color: #c1c1c1;
+  align-items: center;
+}
+.continer .header__list ul .korzinka .korzinka__item .menu span i {
+  margin-top: 20px;
+}
+.continer .header__list ul .korzinka .korzinka__item .menu h4 {
+  font-size: 24px;
+  margin-top: 20px;
+  color: #bb2339;
 }
 .continer .header__list ul .korzinka .button_uchun {
   width: 100%;
   height: 5%;
 }
 .continer .header__list ul .korzinka .button_uchun button {
+  position: fixed;
   width: 35px;
   height: 35px;
   border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 96.6%;
+  margin-left: 48.3%;
   font-size: 24px;
   background-color: #ff0526;
   color: white;
@@ -141,6 +186,17 @@
 }
 .continer .header__list ul .noneKor {
   display: none;
+}
+.continer ::-webkit-scrollbar {
+  width: 5px;
+}
+.continer ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+.continer ::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
 }
 .continer main {
   width: 100%;
